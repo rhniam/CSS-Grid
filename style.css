@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --darkGray: hsl(217, 19%, 35%);
+    --blackBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --color: hsl(210, 46%, 95%)
+}
+
+html {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+
+.cards {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        'violet violet violet violet gray gray whiteS whiteS'
+        'white white black black black black whiteS whiteS';
+    min-width: 91rem;
+    min-height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.info {
+    display: flex;
+    gap: 1rem;
+}
+
+strong {
+    font-size: 1.4rem;
+}
+
+.name p {
+     position: relative;
+     top: -20%;
+     font-size: .8rem;
+}
+.verified {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.violet {
+    background: var(--violet) url('./images/bg-pattern-quotation.svg') no-repeat;
+    background-position: 20vw 0vh;
+    color: var(--color);
+    grid-area: violet;
+
+}
+
+.daniel {
+    border-radius: 50%;
+    border: 0.3rem solid hsla(0, 0%, 100%, 0.582);
+}
+
+.gray {
+    background-color: var(--darkGray);
+    color: var(--color);
+    grid-area: gray;
+}
+
+.white {
+    background-color: var(--White);
+    grid-area: white;
+}
+
+.black {
+    background-color: var(--blackBlue);
+    color: var(--color);
+    grid-area: black;
+}
+
+.patrick {
+    border-radius: 50%;
+    border: 0.3rem solid hsla(263, 55%, 52%, 0.678);
+}
+
+.whiteS {
+    background-color: var(--White);
+    grid-area: whiteS;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.content p {
+    opacity: 0.7;
+}
+
+@media (max-width: 1500px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        min-width: 20em;
+        bottom: 0%;
+    }
+
+    .violet {
+        background: var(--violet) url('./images/bg-pattern-quotation.svg') no-repeat;
+        background-position: 30vw 0vh;
+    }
+}
